@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="e297daaf470102105e2797da116d43f5" label="demo_pi" max_length="40" name="x_1300237_demo_app_demo_pi" type="collection">
+        <element label="email" max_length="80" name="email" type="string"/>
+        <element label="message" max_length="180" name="message" type="string"/>
+        <element display="true" label="Name" mandatory="true" max_length="80" name="name" type="string"/>
+    </element>
+</database>

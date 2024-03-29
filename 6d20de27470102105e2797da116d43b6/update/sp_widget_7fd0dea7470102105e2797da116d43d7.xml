@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function($scope) {
+  /* widget controller */
+  var c = this;
+	 var dataTable = c.data.table;
+    if (dataTable && dataTable.length > 0) {
+        var data = dataTable[0]; // Assuming you only want to use the first record
+        document.getElementById("name").value = data.name || '';
+        document.getElementById("email").value = data.email || '';
+        document.getElementById("message").value = data.message || '';
+    }
+	$scope.checkdescVal = function(desc) // catch the parameter which contains changed text 
+	{
+		console.log(desc);
+	}
+	 var handleFieldChange = function(name,params) {
+        // Get the field name and its new value from the event parameters
+        var fieldname = parms.fieldName;
+        var newValue = parms.newValue;
+
+        // Log the field change
+        console.log("Field '" + name + "' changed: " + params);
+    };
+
+};
+]]></client_script>
+        <controller_as>c</controller_as>
+        <css>/* Basic styling for the form */
+body {
+    font-family: Arial, sans-serif;
+}
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+textarea {
+    height: 150px;
+}
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>form_edit_check</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Form edit check</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+	var grProductTable = new GlideRecord("x_1300237_demo_app_demo_pi");
+	grProductTable.query();
+	data.table=[];
+	while(grProductTable.next()){
+			
+			gs.info(grProductTable.getValue('name'));
+			var obj={};
+			obj.name=grProductTable.getValue('name');
+			obj.email=grProductTable.getValue('email');
+			obj.message=grProductTable.getValue('message');
+			gs.info(obj.message);
+			data.table.push(obj);
+	}
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-03-26 05:02:09</sys_created_on>
+        <sys_id>7fd0dea7470102105e2797da116d43d7</sys_id>
+        <sys_mod_count>22</sys_mod_count>
+        <sys_name>Form edit check</sys_name>
+        <sys_package display_value="demo app" source="x_1300237_demo_app">6d20de27470102105e2797da116d43b6</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="demo app">6d20de27470102105e2797da116d43b6</sys_scope>
+        <sys_update_name>sp_widget_7fd0dea7470102105e2797da116d43d7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-03-27 11:41:41</sys_updated_on>
+        <template><![CDATA[<div>
+<!DOCTYPE html>
+
+<input type="text" ng-model='c.data.desc' id="description" class="form-control" ng-change="checkdescVal(c.data.desc)" required/>  
+
+<form action="#" method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" ng-change="FieldChange('name' , c.data.name)" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" ng-change="FieldChange('email' , c.data.email)"required>
+
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" ng-change="FieldChange('message' , c.data.message)"required></textarea>
+
+    <input type="submit" value="Submit">
+</form>
+ </div>]]></template>
+    </sp_widget>
+</record_update>
