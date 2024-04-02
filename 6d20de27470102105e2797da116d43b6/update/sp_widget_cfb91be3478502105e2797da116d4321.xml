@@ -5,7 +5,20 @@
   /* Widget controller */
   var c = this;
 
-  
+  // back_button_client.js
+function goBack() {
+    window.history.back();
+}
+
+function initializeBackButton() {
+    var backButton = document.getElementById('customBackButton');
+    if (backButton) {
+        backButton.onclick = function() {
+            goBack();
+        };
+    }
+}
+
 }]]></client_script>
         <controller_as>c</controller_as>
         <css/>
@@ -25,22 +38,32 @@
         <script><![CDATA[(function() {
     /* populate the 'data' object */
     /* e.g., data.table = $sp.getValue('table'); */
+   // back_button_server.js
    
+
+
 })();]]></script>
         <servicenow>false</servicenow>
         <sys_class_name>sp_widget</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-03-26 10:20:30</sys_created_on>
         <sys_id>cfb91be3478502105e2797da116d4321</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>12</sys_mod_count>
         <sys_name>form clone</sys_name>
         <sys_package display_value="demo app" source="x_1300237_demo_app">6d20de27470102105e2797da116d43b6</sys_package>
         <sys_policy/>
         <sys_scope display_value="demo app">6d20de27470102105e2797da116d43b6</sys_scope>
         <sys_update_name>sp_widget_cfb91be3478502105e2797da116d4321</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-03-28 11:44:53</sys_updated_on>
-        <template><![CDATA[<widget id="widget-form" options='{"table": "x_1300237_demo_app_demo_pi","title":"dis form"}'></widget>
+        <sys_updated_on>2024-04-01 10:52:22</sys_updated_on>
+        <template><![CDATA[<!-- back_button_widget.html -->
+<div>
+    <button id="customBackButton">Back</button>
+</div>
+
+<div>
+  <widget id="formclone2" options='{"table": "x_1300237_demo_app_demo_pi","title":"dis form"}'></widget>
+</div>
 ]]></template>
     </sp_widget>
 </record_update>
