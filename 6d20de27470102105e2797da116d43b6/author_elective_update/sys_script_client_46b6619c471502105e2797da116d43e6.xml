@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>message</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>gform Test</name>
+        <order/>
+        <script><![CDATA[function onSubmit() {
+    //Type appropriate comment here, and begin script below
+    jslog("onsubmit Client script");
+
+    var handler = function(fieldname, originalValue, newValue) {
+        console.log('The field (' + fieldname + ') has a new value of: ' + newValue);
+    };
+
+    // Register the handler for each field
+    var unregisterName = g_form.onUserChangeValue(handler);
+
+    // To unregister the event listener
+    console.log(unregisterName);
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-03-28 10:10:55</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>46b6619c471502105e2797da116d43e6</sys_id>
+        <sys_mod_count>47</sys_mod_count>
+        <sys_name>gform Test</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="demo app" source="x_1300237_demo_app">6d20de27470102105e2797da116d43b6</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="demo app">6d20de27470102105e2797da116d43b6</sys_scope>
+        <sys_update_name>sys_script_client_46b6619c471502105e2797da116d43e6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-04-02 11:45:18</sys_updated_on>
+        <table>x_1300237_demo_app_demo_pi</table>
+        <type>onSubmit</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="demo app">6d20de27470102105e2797da116d43b6</application>
+        <file_path/>
+        <instance_id>a4550c9bdbf1791038f11729139619d2</instance_id>
+        <instance_name>dev186503</instance_name>
+        <name>sys_script_client_46b6619c471502105e2797da116d43e6</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_client"&gt;&lt;sys_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;applies_extended&gt;false&lt;/applies_extended&gt;&lt;condition/&gt;&lt;description/&gt;&lt;field&gt;message&lt;/field&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;messages/&gt;&lt;name&gt;gform Test&lt;/name&gt;&lt;order/&gt;&lt;script&gt;&lt;![CDATA[function onSubmit() {
+    //Type appropriate comment here, and begin script below
+    jslog("onsubmit Client script");
+
+    var handler = function(fieldname, originalValue, newValue) {
+        console.log('The field (' + fieldname + ') has a new value of: ' + newValue);
+    };
+
+    // Register the handler for each field
+    var unregisterName = g_form.onUserChangeValue(handler);
+
+    // To unregister the event listener
+    console.log(unregisterName);
+}]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-03-28 10:10:55&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;46b6619c471502105e2797da116d43e6&lt;/sys_id&gt;&lt;sys_mod_count&gt;47&lt;/sys_mod_count&gt;&lt;sys_name&gt;gform Test&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="demo app" source="x_1300237_demo_app"&gt;6d20de27470102105e2797da116d43b6&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="demo app"&gt;6d20de27470102105e2797da116d43b6&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_client_46b6619c471502105e2797da116d43e6&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-04-02 11:45:18&lt;/sys_updated_on&gt;&lt;table&gt;x_1300237_demo_app_demo_pi&lt;/table&gt;&lt;type&gt;onSubmit&lt;/type&gt;&lt;ui_type&gt;0&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1324323969</payload_hash>
+        <record_name>gform Test</record_name>
+        <reverted_from/>
+        <source>38effd2c475102105e2797da116d4340</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-04-02 11:45:18</sys_created_on>
+        <sys_id>6940373147d502105e2797da116d4371</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18e9ea0bf040000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-04-02 11:45:18</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>65407bf9499502104dbf04503cc3c886</update_guid>
+        <update_guid_history>65407bf9499502104dbf04503cc3c886:-1324323969,c600fffdf9950210c0b15e0efc1f3503:2015508991,465dafb9c5950210a8928eb33028eb3d:7857887,657c2fb9dd95021067221896ca100f23:-827681087,2bcbaf3985950210105bb4b65d85d714:1227555904,bebaeb399a9502103aef056c08994736:-1073390914,2b9a2f392e950210f26e1df74845b731:1532846544,854aa73933950210d01df006bd175924:977175056,8344aff52855021003bc9d2ae69bb643:36927720,bf3c1bb5ea5502103b29d7c2d176b754:246169516,d67b17b5325502101870ea3e609f9017:-1929417574,884bdb757c550210e67424e130647034:2058862522,03dad37582550210802b52d05dddc8ed:-1447357799,8184173505150210f7c6d47ef59e8b43:2058862522,4c16b6f5f0910210165af39995ab3a47:-1617261908,ad941e6924550210a87b90e19faf0928:-1901901379,bf44de29105502100f8d0ec2de0d034e:736511882,d2141629cd5502105e7754b68bb2c274:79599912,fef312297e5502100f77d46a1cc0f384:1135805617,7c83d265d455021009cbb25460d78a4f:-512937614,cd439ee578550210b8b9e680f6fab3f4:1058509694,f5231ee5be550210d5a5ae10d41d7994:1625125689,21031ae56f55021087fe0394ca81a52f:446419858,c8035ae5c35502101ea3b494c25c30b5:1247624550,63f216e53d5502103edd9b20773f2fec:-1284508064,d4f252e52e550210ca257587dd2428de:1058509694,c1c216e503550210656d743ae26d9b97:-1362816180,2cc216e5a55502101a86fc31e0e6088e:-1534287412,ef92d2a5ff550210cf776f64e895ae0a:-1596791174,593e66e461550210b90ecf80df71e58d:-2142642615,c722465cec950210b57c54c0b24ba365:-1218109770,67543ddc36550210f846b0dfcc083f40:-1747888064,2904f59c9e550210206f8a9c8385f57b:-411290623,76c23d5cee55021088cb5b6ba51c9262:-1747888064,93013558ac5502107caa17e727a1bca7:1486709006,b6f07d9851550210c5e4ea118fd33f77:-1433280668,f2bfad18d5550210fb77e5234461bf79:114361577,d44fed5468550210917ad1adafee1b99:1792759907,26ee65d4915502104ea852024e58d4d7:1880634868,20ee65d456550210df5a49b5947081ce:-268517834,34de65d468550210b14c28bea2f7fd73:928937110,1bdde5d4ee55021044d6cede36b4581f:-1435793621,215d2d14b9550210b6e78e34a06ac382:-1740074929,d73d6994c05502108deacca7b5ea916d:244144956,8c5ca154ed5502104f2c5ed0bf57ee1e:1108457298,578b65dc231502101c44cc27787b9ed6:-2039406412,1a3b6dd0a65502107163e337bc5d521f:288178403,42ba61503d550210d612936849c75e07:-2039406412</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-04-03 06:14:40</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>76111ee644f64f989cefac532862d840</sys_id>
+        <sys_metadata>46b6619c471502105e2797da116d43e6</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>gform Test</sys_name>
+        <sys_package display_value="demo app" source="x_1300237_demo_app">6d20de27470102105e2797da116d43b6</sys_package>
+        <sys_parent display_value="demo_pi">e297daaf470102105e2797da116d43f5</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="demo app">6d20de27470102105e2797da116d43b6</sys_scope>
+        <sys_scope_delete display_value="">004a7a8ac44e48cc80002e43855c2090</sys_scope_delete>
+        <sys_update_name>sys_script_client_46b6619c471502105e2797da116d43e6</sys_update_name>
+        <sys_update_version display_value="sys_script_client_46b6619c471502105e2797da116d43e6">6940373147d502105e2797da116d4371</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-04-03 06:14:40</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
